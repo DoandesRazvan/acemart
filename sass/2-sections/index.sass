@@ -1,0 +1,1474 @@
+@import '../0-utilities/_base.sass'
+@import '../0-utilities/_functions.sass'
+@import '../0-utilities/_utilities.sass'
+@import '../0-utilities/_variables.sass'
+
+.nav
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: $purple
+  padding:
+    top: rem(10)
+    bottom: rem(10)
+
+  @media (min-width: $medium)
+    flex-direction: row
+    justify-content: center
+
+  &__logo
+    font:
+      family: $primary
+      weight: 400
+      size: rem(20)
+    color: $white
+
+    @media (min-width: $medium)
+      margin-right: auto
+    
+    @media (min-width: $large)
+      font-size: rem(30)
+
+  &__search
+    margin-top: rem(10)
+    padding: rem(10)
+      left: rem(40)
+    background: url('search.svg'), $white
+      repeat: no-repeat
+      size: rem(20)
+      position: rem(15) center
+
+    text-align: center
+
+    border: none
+      radius: rem(50)
+
+    @media (min-width: $medium)
+      margin-top: 0
+      min-width: rem(250)
+
+    @media (min-width: $large)
+      min-width: rem(540)
+      padding-left: rem(50)
+
+      text-align: left
+
+    &::placeholder
+      font:
+        family: $secondary
+        size: rem(15)
+        style: italic
+      color: $lightPurple
+
+  &__user
+    display: flex
+    gap: rem(30)
+    margin-top: rem(20)
+
+    @media (min-width: $medium)
+      margin-top: 0
+      margin-left: auto
+
+    &__cart, &__sign-in
+      display: flex
+      align-items: center
+      gap: rem(5)
+
+      &__icon
+        font-size: rem(30)
+        color: $lightBlue
+
+      &__name
+        font:
+          family: $primary
+          size: rem(15)
+        text-decoration: none
+        color: $white
+
+.landing
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $large)
+    display: grid
+    height: calc(100vh - 66px)
+    grid-template-rows: repeat(2, 1fr)
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-areas: 'tv main main' 'subscribe main main'
+
+  &__tv
+    @extend %padding
+
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    grid-area: tv
+    min-height: rem(400)
+    padding-bottom: rem(20)
+    order: 2 
+    background: linear-gradient(.5turn, rgba(110, 60, 188, .1), rgba(110, 60, 188, .8)), url('landingtv.jpeg')
+      size: cover
+
+    &__title
+      font:
+        family: $primary
+        size: rem(30)
+      color: $white
+
+      span
+        font-weight: 400
+
+      @media (min-width: $medium)
+        font-size: rem(40)
+
+    &__cta
+      font:
+        family: $secondary
+        style: italic
+        size: rem(15)
+      text-decoration: none
+      color: $white
+
+      @media (min-width: $medium)
+        font-size: rem(20)
+
+      @media (min-width: $large)
+        &:hover
+          text-decoration: underline
+
+  &__subscribe
+    @extend %padding
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    grid-area: subscribe
+    padding:
+      top: rem(20)
+      bottom: rem(20)
+    order: 3
+    background: $lightPurple
+
+    &__title
+      font:
+        family: $primary
+        size: rem(30)
+      color: $white
+
+      @media (min-width: $medium)
+        font-size: rem(35)
+
+    &__description
+      margin-top: rem(10)
+
+      font:
+        family: $secondary
+        size: rem(20)
+      color: $yellowGray
+
+      @media (min-width: $medium)
+        font-size: rem(22)
+
+    &__price
+      margin-top: rem(20)
+
+      font:
+        family: $secondary
+        size: rem(20)
+      color: $yellowGray
+
+      span
+        font:
+          weight: 700
+          style: italic
+        color: $white
+
+      @media (min-width: $medium)
+        font-size: rem(22)
+
+    &__cta
+      width: rem(200)
+      height: rem(40)
+      margin-top: rem(20)
+
+      font:
+        family: $primary
+        weight: 700
+        size: rem(20)
+      color: $purple
+
+      border: none
+        radius: rem(5)
+
+      box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+      @media (min-width: $large)
+        transition: background .3s ease
+        cursor: pointer
+
+        &:hover
+          background: $purple
+
+          color: $white
+  
+  &__main
+    @extend %padding
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    grid-area: main
+    min-height: rem(500)
+    padding:
+      top: rem(20)
+      bottom: rem(20)
+    order: 1
+    background: linear-gradient(.5turn, rgba(110, 60, 188, .5), rgba(110, 60, 188, .8)), url('landingphoto.jpeg')
+      size: cover
+      position: center
+
+    @media (min-width: $medium)
+      justify-content: flex-end
+
+    @media (min-width: $large)
+      justify-content: flex-end
+      padding-bottom: rem(100)
+      background: linear-gradient(.5turn, rgba(110, 60, 188, .1), rgba(110, 60, 188, .8)), url('landingphoto.jpeg')
+        position: center
+
+    &__title
+      font:
+        family: $primary
+        weight: 400
+        size: rem(30)
+      color: $white
+
+      @media (min-width: $large)
+        font-size: rem(40)
+
+    &__description
+      margin-top: rem(10)
+
+      font:
+        family: $secondary
+        size: rem(20)
+      color: $yellowGray
+
+      @media (min-width: $large)
+        font-size: rem(25)
+
+    &__cta
+      width: rem(180)
+      height: rem(40)
+      margin-top: rem(20)
+
+      font:
+        family: $primary
+        weight: 700
+        size: rem(20)
+      color: $purple
+
+      border: none
+        radius: rem(5)
+
+      box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+      @media (min-width: $large)
+        width: rem(240)
+        height: rem(50)
+
+        font-size: rem(30)
+
+        transition: background .3s ease
+        cursor: pointer
+
+        &:hover
+          background: $purple
+
+          color: $white
+
+.deals
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: rem(60)
+
+  @media (min-width: $large)
+    margin: rem(60) rem(40) 0 
+
+  &__title
+    font:
+      family: $primary
+      size: rem(30)
+    color: $purple
+
+    @media (min-width: $medium)
+      font-size: rem(35)
+      
+    @media (min-width: $large)
+      font-size: rem(40)
+
+  &__rings, &__sneakers, &__macbook
+    @extend %padding
+
+    display: flex
+    align-items: flex-end
+    width: 100%
+    height: rem(500)
+    padding-bottom: rem(20)
+
+    @media (min-width: $large)
+      align-items: center
+      margin-top: rem(40)
+
+    &__content
+      @extend %padding
+
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 100%
+      height: rem(200)
+      background: $purple
+
+      @media (min-width: $large)
+        align-items: flex-start
+        width: rem(600)
+        height: rem(300)
+
+      &__title
+        font:
+          family: $primary
+          size: rem(20)
+        text-align: center
+        color: $white
+
+        @media (min-width: $medium)
+          font-size: rem(30)
+
+        @media (min-width: $large)
+          font-size: rem(35)
+          text-align: left
+
+      &__description
+        margin-top: rem(10)
+
+        font:
+          family: $secondary
+          size: rem(15)
+        text-align: center
+        color: $yellowGray
+
+        @media (min-width: $medium)
+          font-size: rem(20)
+
+        @media (min-width: $large)
+          font-size: rem(25)
+          text-align: left
+
+      &__cta
+        width: rem(100)
+        height: rem(30)
+        margin-top: rem(10)
+        background: $white
+
+        font:
+          family: $primary
+          weight: 700
+          size: rem(15)
+        color: $purple
+
+        border: none
+          radius: rem(5)
+        
+        box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+        
+        @media (min-width: $medium)
+          width: rem(140)
+          height: rem(40)
+          margin-top: rem(20)
+
+          font-size: rem(20)
+
+        @media (min-width: $large)
+          transition: background .3s ease
+          cursor: pointer
+
+          &:hover
+            background: $lightPurple
+
+            color: $white
+
+  &__rings
+    margin-top: rem(40)
+    background: url('dealsring.jpeg')
+      size: cover
+      position: bottom
+
+    @media (min-width: 52.5em)
+      background-position: center
+
+  &__sneakers
+    background: url('dealsnike.jpeg')
+      size: cover
+      position: center top
+
+    @media (min-width: $large)
+      justify-content: flex-end
+
+      &__content
+        align-items: flex-end !important
+
+        &__title
+          text-align: right !important
+
+        &__description
+          text-align: right !important
+
+  &__macbook
+    background: url('dealsmacbook.jpeg')
+      size: cover
+      position: center
+
+  &__more
+    margin-top: rem(40)
+
+    font:
+      family: $secondary
+      style: italic
+      size: rem(18)
+    text-decoration: none
+    color: $lightPurple
+
+    @media (min-width: $medium)
+      font-size: rem(25)
+
+    @media (min-width: $large)
+      &:hover
+        text-decoration: underline
+
+.benefits
+  @extend %padding
+
+  margin-top: rem(60)
+
+  &__title
+    font:
+      family: $primary
+      size: rem(30)
+    text-align: center
+    color: $purple
+
+    @media (min-width: $medium)
+      font-size: rem(35)
+      
+    @media (min-width: $large)
+      font-size: rem(40)
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: rem(60)
+    margin-top: rem(40)
+
+    @media (min-width: $large)
+      flex-direction: row
+      justify-content: center
+      margin-top: rem(60)
+    
+    @media (min-width: $xlarge)
+      gap: rem(120)
+
+    &__benefit
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      text-align: center
+
+      // &:nth-of-type(1)
+      //   margin-top: rem(40)
+
+      //   @media (min-width: $large)
+      //     margin-top: 0
+
+      &__icon
+        font-size: rem(40)
+        color: $lightBlue
+
+        @media (min-width: $xlarge)
+          font-size: rem(50)
+
+      &__tagline
+        margin-top: rem(10)
+
+        font:
+          family: $secondary
+          size: rem(20)
+        color: $lightPurple
+
+        @media (min-width: $xlarge)
+          font-size: rem(25)
+
+.the-app
+  @extend %padding
+
+  margin-top: rem(60)
+  padding:
+    top: rem(20)
+    bottom: rem(20)
+  background: $purple
+
+  @media (min-width: $large)
+    margin: rem(60) rem(40) 0
+    padding:
+      top: rem(40)
+      bottom: rem(40)
+
+  &__store-icons
+    display: none
+
+    @media (min-width: $large)
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: rem(40)
+
+      &__appstore, &__playstore
+        font-size: rem(160)
+        color: $white
+      
+      &__and
+        font:
+          family: $primary
+          weight: 700
+          size: rem(80)
+        color: $white
+
+  &__title
+    font:
+      family: $primary
+      size: rem(30)
+    text-align: center
+    color: $white
+
+    @media (min-width: $medium)
+      font-size: rem(35)
+      
+    @media (min-width: $large)
+      margin-top: rem(20)
+
+      font-size: rem(40)
+
+  &__description
+    margin-top: rem(20)
+
+    font:
+      family: $secondary
+      size: rem(20)
+    text-align: center
+    color: $yellowGray
+
+    @media (min-width: $medium)
+      font-size: rem(25)
+
+  &__ctas
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: rem(10)
+    margin-top: rem(40)
+
+    @media (min-width: $medium)
+      flex-direction: row
+      justify-content: center
+      gap: rem(40)
+
+    &__cta
+      width: rem(120)
+      height: rem(40)
+
+      font:
+        family: $primary
+        weight: 700
+        size: rem(15)
+      color: $purple
+
+      border: none
+        radius: rem(5)
+      box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+      @media (min-width: $medium)
+        width: rem(180)
+        height: rem(60)
+
+        font-size: rem(25)
+
+      @media (min-width: $large)
+        transition: background .3s ease
+        cursor: pointer
+
+        &:hover
+          background: $lightPurple
+
+          color: $white
+
+.free-shipping
+  @extend %padding
+
+  padding:
+    top: rem(20)
+    bottom: rem(20)
+  background: $lightPurple
+
+  @media (min-width: $large)
+    margin: rem(40) rem(40) 0
+
+  &__description
+    font:
+      family: $primary
+      weight: 700
+      size: rem(20)
+    text-align: center
+    color: $white
+
+    @media (min-width: $large)
+      font-size: rem(22)
+
+    span, a
+      font-weight: 400
+
+    a
+      color: $white
+
+.for-categories
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $large)
+    gap: rem(40)
+    margin: rem(40) rem(40) 0
+
+  @media (min-width: $xlarge)
+    flex-direction: row
+    justify-content: space-between
+
+  &__for-kids, &__for-adults
+    height: rem(300)
+    position: relative
+    flex-grow: 1
+    // z-index: -1
+
+    @media (min-width: 29.6875em)
+      height: rem(400)
+
+    @media (min-width: $medium)
+      height: rem(500)
+
+    @media (min-width: $large)
+      height: rem(600)
+
+    @media (min-width: $xlarge)
+      width: rem(700)
+
+    &__content
+      @extend %padding
+
+      display: flex
+      position: relative
+      flex-direction: column
+      justify-content: flex-end
+      width: 100%
+      height: 100%
+      padding-bottom: rem(10)
+      z-index: 1
+
+      @media (min-width: 29.6875em)
+        padding-bottom: rem(20)
+      
+      @media (min-width: $medium)
+        padding-bottom: rem(40)
+
+      &__title
+        font:
+          family: $primary
+          size: rem(25)
+        color: $white
+
+        @media (min-width: 29.6875em)
+          font-size: rem(30)
+
+        @media (min-width: $medium)
+          font-size: rem(40)
+
+      &__description
+        font:
+          family: $secondary
+          size: rem(15)
+        color: $yellowGray
+
+        @media (min-width: 29.6875em)
+          font-size: rem(20)
+        
+        @media (min-width: $medium)
+          font-size: rem(25)
+
+      &__cta
+        width: rem(120)
+        height: rem(30)
+        margin-top: rem(10)
+        background: $white
+
+        font:
+          family: $primary
+          weight: 700
+          size: rem(15)
+        color: $purple
+
+        border: none
+          radius: rem(5)
+        box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+        @media (min-width: 29.6875em)
+          width: rem(160)
+          height: rem(40)
+
+          font-size: rem(20)
+
+        @media (min-width: $medium)
+          width: rem(180)
+          height: rem(50)
+
+          font-size: rem(25)
+        
+        // not working because z-index
+        @media (min-width: $large)
+          margin-top: rem(20)
+
+          transition: background .3s ease
+          cursor: pointer
+
+          &:hover
+            background: $lightPurple
+
+            color: $white
+
+  &__for-kids
+    background: linear-gradient(.5turn, rgba(110, 60, 188, .3), rgba(110, 60, 188, .8)), url('forkids.jpeg')
+      size: cover
+      position: center
+
+    @media (min-width: $medium)
+      background: linear-gradient(.5turn, rgba(110, 60, 188, .3), rgba(110, 60, 188, .8)), url('forkids.jpeg')
+        size: cover
+        position: center
+    
+    &__content
+      align-items: flex-end
+
+      &::after
+        content: ''
+        position: absolute
+        background: $purple
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: -1
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%)
+
+      &__description
+        padding-left: 30%
+
+        text-align: right
+
+  &__for-adults
+    background: linear-gradient(.5turn, rgba(110, 60, 188, .3), rgba(110, 60, 188, .8)), url('foradults.jpeg')
+      size: cover
+    
+    &__content
+      align-items: flex-start
+
+      &::after
+        content: ''
+        position: absolute
+        background: $purple
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        z-index: -1
+        clip-path: polygon(0 0, 0% 100%, 100% 100%)
+
+      &__description
+        padding-right: 30%
+
+.featured-categories
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: rem(60)
+
+  &__title
+    font:
+      family: $primary
+      size: rem(30)
+    text-align: center
+    color: $purple
+
+    @media (min-width: $medium)
+      font-size: rem(35)
+      
+    @media (min-width: $large)
+      font-size: rem(40)
+
+  &__items
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: rem(40)
+
+    @media (min-width: $large)
+      flex-direction: row
+      gap: rem(100)
+      margin-top: rem(60)
+
+    @media (min-width: $xlarge)
+      gap: rem(200)
+
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: rem(10)
+
+      &:nth-of-type(1)
+        margin-top: rem(40)
+
+        @media (min-width: $large)
+          margin-top: 0
+
+      &__image
+        width: rem(100)
+        height: rem(100)
+        object-fit: cover
+
+        border: solid 5px $lightPurple
+          radius: 50%
+
+        @media (min-width: $medium)
+          width: rem(150)
+          height: rem(150)
+
+      &__link
+        font:
+          family: $secondary
+          size: rem(15)
+        text-decoration: none
+        color: $lightPurple
+
+        @media (min-width: $medium)
+          font-size: rem(20)
+
+  &__all
+    margin-top: rem(40)
+
+    font:
+      family: $secondary
+      style: italic
+      size: rem(18)
+    text-decoration: none
+    color: $lightPurple
+
+    @media (min-width: $medium)
+      font-size: rem(25)
+
+    @media (min-width: $large)
+      &:hover
+        text-decoration: underline
+
+.featured-items
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: rem(60)
+
+  &__title
+    font:
+      family: $primary
+      size: rem(30)
+    text-align: center
+    color: $purple
+
+    @media (min-width: $medium)
+      font-size: rem(35)
+      
+    @media (min-width: $large)
+      font-size: rem(40)
+
+  &__items
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: rem(40)
+
+    @media (min-width: $xlarge)
+      flex-direction: row
+      margin-top: rem(40)
+
+    &__item
+      min-width: rem(260)
+      background: $lightPurple
+      
+      border-radius: rem(10)
+      box-shadow: rem(6) rem(6) rem(12) rgba(0, 0, 0, .2)
+
+      @media (min-width: 26.875em)
+        min-width: rem(300)
+      
+      @media (min-width: $medium)
+        min-width: rem(400)
+
+      &:nth-of-type(1)
+        margin-top: rem(40)
+
+        @media (min-width: $xlarge)
+          margin-top: 0
+
+      &__image
+        width: 100%
+        height: rem(200)
+        object-fit: cover
+
+        border-radius: rem(10) rem(10) 0 0  
+
+      &__content
+        @extend %padding
+        
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: rem(10)
+
+        padding:
+          top: rem(20)
+          bottom: rem(20)
+
+        &__title
+          font:
+            family: $primary
+            size: rem(15)
+          color: $white
+
+          @media (min-width: $medium)
+            font-size: rem(20)
+
+        &__price
+          font:
+            family: $primary
+            weight: 700
+            size: rem(25)
+          color: $lightBlue
+
+          @media (min-width: $medium)
+            font-size: rem(30)
+
+        &__cta
+          font:
+            family: $secondary
+            style: italic
+            size: rem(15)
+          text-decoration: none
+          color: $white
+
+          @media (min-width: $medium)
+            font-size: rem(20)
+
+          @media (min-width: $large)
+            &:hover
+              text-decoration: underline
+
+  &__more
+    margin-top: rem(40)
+
+    font:
+      family: $secondary
+      style: italic
+      size: rem(18)
+    text-decoration: none
+    color: $lightPurple
+
+    @media (min-width: $medium)
+      font-size: rem(25)
+
+    @media (min-width: $large)
+      &:hover
+        text-decoration: underline
+
+.smartwatch, .skincare
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: rem(400)
+
+  @media (min-width: $large)
+    min-height: rem(500)
+    margin: 0 rem(40) 0
+  
+  &__title
+    font:
+      family: $primary
+      size: rem(25)
+    color: $white
+
+    @media (min-width: $medium)
+      font-size: rem(30)
+
+    @media (min-width: $large)
+      font-size: rem(35)
+
+  &__description
+    margin-top: rem(5)
+
+    font:
+      family: $secondary
+      size: rem(20)
+    color: $yellowGray
+
+    @media (min-width: $medium)
+      max-width: rem(400)
+      
+      font-size: rem(25)
+    
+    @media (min-width: $large)
+      max-width: rem(600)
+      font-size: rem(30)
+
+  &__cta
+    width: rem(160)
+    height: rem(40)
+    margin-top: rem(15)
+    background: $white
+
+    font:
+      family: $primary
+      weight: 700
+      size: rem(20)
+    color: $purple
+
+    border: none
+      radius: rem(5)
+    box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+    @media (min-width: $medium)
+      width: rem(200)
+      height: rem(50)
+
+      font-size: rem(25)
+
+    @media (min-width: $large)
+      width: rem(240)
+      height: rem(60)
+      margin-top: rem(25)
+
+      font-size: rem(30)
+
+      cursor: pointer
+      transition: background .3s ease
+
+      &:hover
+        background: $lightPurple
+        
+        color: $white
+
+.smartwatch
+  margin-top: rem(60)
+  background: linear-gradient(.75turn, rgba(110, 60, 188, .7), rgba(110, 60, 188, .8)), url('promowatch.jpg')
+    size: cover
+    position: center
+
+.skincare
+  align-items: flex-end
+  background: linear-gradient(.25turn, rgba(110, 60, 188, .7), rgba(110, 60, 188, .8)), url('promoskincare.jpg')
+    repeat: no-repeat
+    size: cover
+    position: left 80%
+
+  @media (min-width: $large)
+    margin-top: rem(40)
+
+  &__title
+    text-align: right
+  
+  &__description
+    text-align: right
+
+.subscribers
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: rem(60)
+
+  &__title
+    font:
+      family: $primary
+      size: rem(30)
+    text-align: center
+    color: $purple
+
+    @media (min-width: $medium)
+      font-size: rem(35)
+      
+    @media (min-width: $medium)
+      font-size: rem(40)
+
+  &__description
+    margin-top: rem(20)
+
+    font:
+      family: $secondary
+      size: rem(18)
+    text-align: center
+    color: $lightPurple
+
+    @media (min-width: $medium)
+      margin-top: rem(30)
+
+      font-size: rem(25)
+
+    @media (min-width: $large)
+      width: rem(900)
+
+  &__pricing
+    margin-top: rem(10)
+
+    font:
+      family: $secondary
+      style: italic
+      size: rem(18)
+    text-align: center
+    color: $lightBlue
+
+    @media (min-width: $medium)
+      margin-top: rem(20)
+
+      font-size: rem(25)
+    
+    span
+      font-weight: 700
+
+  &__cta
+    width: rem(180)
+    height: rem(50)
+    margin-top: rem(20)
+    background: $purple
+
+    font:
+      family: $primary
+      weight: 700
+      size: rem(20)
+    color: $white
+
+    border: none
+      radius: rem(5)
+    box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+    
+    @media (min-width: $medium)
+      width: rem(260)
+      height: rem(70)
+      margin-top: rem(30)
+
+      font-size: rem(30)
+
+    @media (min-width: $large)
+      transition: background .3s ease
+      cursor: pointer
+
+      &:hover
+        background: $lightPurple
+
+.newsletter
+  @extend %padding
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: rem(60)
+  padding:
+    top: rem(40)
+    bottom: rem(40)
+  background: $lightPurple
+
+  @media (min-width: $large)
+    margin: rem(60) rem(40) 0
+
+  &__text
+    &__title
+      font:
+        family: $primary
+        size: rem(20)
+      text-align: center
+      color: $white
+
+      @media (min-width: $medium)
+        font-size: rem(25)
+
+    &__description
+      margin-top: rem(10)
+
+      font:
+        family: $secondary
+        size: rem(15)
+      text-align: center
+      color: $white
+
+      @media (min-width: $medium)
+        margin-top: rem(20)
+
+        font-size: rem(20)
+      
+    &__disclaimer
+      margin-top: rem(10)
+
+      font:
+        family: $secondary
+        style: italic
+        size: rem(12)
+      text-align: center
+      color: $yellowGray
+
+      @media (min-width: $medium)
+        margin-top: rem(20)
+
+        font-size: rem(15)
+
+  &__sign-up
+    position: relative
+    margin-top: rem(20)
+    width: rem(263)
+
+    @media (min-width: $medium)
+      width: rem(403)
+      margin-top: rem(40)
+
+    &__email
+      width: rem(163)
+      height: rem(40)
+      padding: 0 rem(10)
+
+      font:
+        family: $secondary
+        size: rem(15)
+      color: $purple
+
+      border: none
+        radius: rem(5) 0 0 rem(5)
+      box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+      @media (min-width: $medium)
+        width: rem(263)
+        height: rem(60)
+
+        font-size: rem(20)
+
+      &::placeholder
+        font:
+          family: $secondary
+          style: italic
+          size: rem(15)
+        color: $purple
+
+        @media (min-width: $medium)
+          font-size: rem(20)
+
+    &__cta
+      position: absolute
+      right: 0
+      width: rem(100)
+      height: rem(40)
+      background: $purple
+
+      font:
+        family: $primary
+        weight: 700
+        size: rem(15)
+      color: $white
+
+      border: none
+        radius: 0 rem(5) rem(5) 0
+      box-shadow: rem(6) rem(6) rem(6) rgba(0, 0, 0, .15)
+
+      @media (min-width: $medium)
+        width: rem(140)
+        height: rem(60)
+        
+        font-size: rem(20)
+
+      @media (min-width: $large)
+        transition: background .3s ease
+        cursor: pointer
+
+        &:hover
+          background: $lightBlue
+          
+          color: $purple
+
+.footer
+  @extend %padding
+
+  margin-top: rem(60)
+  // margin: rem(60) rem(20) 0
+
+  @media (min-width: $large)
+    display: flex
+    justify-content: center
+    margin: rem(60) rem(40) 0
+    padding: rem(40) 0
+
+    border:
+      top: solid 1px $lightBlue
+      bottom: solid 1px $lightBlue
+
+  // padding:
+  //   top: rem(20)
+  //   bottom: rem(20)
+
+  &__links
+    display: flex
+    flex-direction: column
+    padding:
+      top: rem(20)
+      bottom: rem(20)
+
+    border:
+      top: solid rem(1) $lightBlue
+      bottom: solid rem(1) $lightBlue
+
+    @media (min-width: $large)
+      flex-direction: row
+      gap: rem(30)
+      padding: 0 rem(40) 0 0
+
+      border: none
+        right: solid rem(1) $lightBlue
+    
+    @media (min-width: $xlarge)
+      gap: rem(50)
+
+    &__section
+      display: flex
+      flex-direction: column
+      
+      &:not(:nth-of-type(1))
+        margin-top: rem(20)
+
+        @media (min-width: $large)
+          margin-top: 0
+
+      &__title
+        font:
+          family: $primary
+          size: rem(15)
+        color: $purple
+
+        @media (min-width: $medium)
+          font-size: rem(20)
+
+      &__link
+        margin-top: rem(5)
+
+        font:
+          family: $secondary
+          size: rem(12)
+        text-decoration: none
+        color: $lightPurple
+
+        @media (min-width: $medium)
+          font-size: rem(16)
+
+        @media (min-width: $large)
+          &:hover
+            color: black
+
+        &:nth-of-type(1)
+          margin-top: rem(10)
+
+  &__follow
+    display: flex
+    flex-direction: column
+    padding:
+      top: rem(20)
+      bottom: rem(20)
+
+    border-bottom: solid 1px $lightBlue
+
+    @media (min-width: $large)
+      display: block
+      margin-left: rem(40)
+      padding: 0
+      
+      border-bottom: none
+
+    &__title
+      font:
+        family: $primary
+        size: rem(15)
+      color: $purple
+
+      @media (min-width: $medium)
+        font-size: rem(20)
+
+    &__goto
+      margin-top: rem(5)
+      font-size: rem(30)
+      text-decoration: none
+      color: $lightPurple
+
+      @media (min-width: $medium)
+        font-size: rem(40)
+
+      @media (min-width: $large)
+        margin:
+          left: rem(10)
+          top: rem(10)
+
+        &:hover
+          color: $purple
+
+      &:nth-of-type(1)
+        margin-top: rem(10)
+
+        @media (min-width: $large)
+          margin-left: 0
+
+.after-footer
+  @extend %padding
+
+  &__title
+    margin-top: rem(10)
+
+    font:
+      family: $primary
+      style: italic
+      size: rem(24)
+    color: lighten($purple, 45%)
+
+    @media (min-width: $medium)
+      font-size: rem(40)
+
+    @media (min-width: $large)
+      font-size: rem(50)
+      text-align: center
+
+      user-select: none

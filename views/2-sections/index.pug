@@ -1,0 +1,240 @@
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+    title Acemart - Home
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;700&display=swap", rel="stylesheet")
+    link(href="index.css", rel="stylesheet")
+  body
+    header.nav
+      h1.nav__logo Acemart
+
+      input(type="search", placeholder="Search for an item...").nav__search
+
+      .nav__user
+        .nav__user__cart
+          i.nav__user__cart__icon.fas.fa-shopping-cart
+          a(href="#").nav__user__cart__name Your cart
+
+        .nav__user__sign-in
+          i.nav__user__sign-in__icon.fas.fa-user
+          a(href="#").nav__user__sign-in__name Sign in
+    
+    main
+      section.landing
+        .landing__tv
+          h1.landing__tv__title 10% off 
+            span every smart TV
+          a(href="#").landing__tv__cta View the products &#8594;
+
+        .landing__subscribe
+          h1.landing__subscribe__title Become a subscriber
+          p.landing__subscribe__description Get acces to the best deals, free shipping and gift card giveaways!
+          p.landing__subscribe__price Starting at 
+            span $4.99/month
+            | .
+          button.landing__subscribe__cta Subscribe
+
+        .landing__main
+          h1.landing__main__title Everything you need, a shop away
+          p.landing__main__description You've come to the right place! Acemart is the modern way of shopping with over 9000 deals on old and new products, benefits for subscribers and a pleasant shopping experience!
+          button.landing__main__cta Shop now
+
+      section.deals
+        h1.deals__title Deals of the day
+
+        .deals__rings
+          .deals__rings__content
+            h1.deals__rings__content__title Save money on golden rings
+            p.deals__rings__content__description Elevate your style with our selection of beautiful bands.
+            button.deals__rings__content__cta Browse
+
+        .deals__sneakers
+          .deals__sneakers__content
+            h1.deals__sneakers__content__title Find comfort in Nike sneakers
+            p.deals__sneakers__content__description Check out our brand new deals on top-of-the-line shoes.
+            button.deals__sneakers__content__cta Buy now
+
+        .deals__macbook
+          .deals__macbook__content
+            h1.deals__macbook__content__title The ultimate MacBook
+            p.deals__macbook__content__description Look out for the newest MacBook, now on Acemart.
+            button.deals__macbook__content__cta Find it
+
+        a(href="#").deals__more Check out more of our deals &#8594;
+
+      section.benefits
+        h1.benefits__title Acemart benefits
+
+        .benefits__content
+          .benefits__content__benefit
+            i.benefits__content__benefit__icon.fas.fa-exchange-alt
+            h1.benefits__content__benefit__tagline 14-day guaranteed return
+
+          .benefits__content__benefit
+            i.benefits__content__benefit__icon.fas.fa-truck
+            h1.benefits__content__benefit__tagline Same-day delivery (for Subscribers)
+
+          .benefits__content__benefit
+            i.benefits__content__benefit__icon.fas.fa-dollar-sign
+            h1.benefits__content__benefit__tagline Price match guarantee
+
+      section.the-app
+        .the-app__store-icons
+          i.the-app__store-icons__appstore.fab.fa-app-store-ios
+          p.the-app__store-icons__and &
+          i.the-app__store-icons__playstore.fab.fa-google-play
+      
+        h1.the-app__title Use the app
+        p.the-app__description We've made it easy for our mobile users! Download the app to have a great experience shopping from your phone or tablet. Our mobile users get exclusive deals, too!
+
+        .the-app__ctas
+          button.the-app__ctas__cta Appstore
+          button.the-app__ctas__cta Play store
+
+      section.free-shipping
+        p.free-shipping__description Free shipping 
+          span for our subscribers! Learn more about the benefits by 
+          a(href="#") clicking here
+          span .
+
+      section.for-categories
+        section.for-categories__for-kids
+          .for-categories__for-kids__content
+            h1.for-categories__for-kids__content__title For kids
+            p.for-categories__for-kids__content__description Browse the newest toys. Find the perfect gift today! 
+            button.for-categories__for-kids__content__cta Browse now
+
+        section.for-categories__for-adults
+          .for-categories__for-adults__content
+            h1.for-categories__for-adults__content__title For adults
+            p.for-categories__for-adults__content__description Look for new appliances. We've got a new selection!
+            button.for-categories__for-adults__content__cta Search now
+
+      section.featured-categories
+        h1.featured-categories__title Featured categories
+
+        .featured-categories__items
+          .featured-categories__items__item
+            img(src="categoriesgift.jpeg").featured-categories__items__item__image
+            a(href="#").featured-categories__items__item__link Gift Ideas
+
+          .featured-categories__items__item
+            img(src="categoriesweights.jpeg").featured-categories__items__item__image
+            a(href="#").featured-categories__items__item__link Fitness & Health
+
+          .featured-categories__items__item
+            img(src="categorieslaptop.jpeg").featured-categories__items__item__image
+            a(href="#").featured-categories__items__item__link Laptops
+
+          .featured-categories__items__item
+            img(src="categoriesbike.jpeg").featured-categories__items__item__image
+            a(href="#").featured-categories__items__item__link Bicycles
+
+        a(href="#").featured-categories__all See all categories &#8594;
+
+      section.featured-items
+        h1.featured-items__title Featured items
+
+        .featured-items__items
+          .featured-items__items__item
+            img(src="categoriesperfume.jpg").featured-items__items__item__image
+
+            .featured-items__items__item__content
+              h2.featured-items__items__item__content__title Chanel Women Perfume
+              p.featured-items__items__item__content__price $81.99
+              a(href="#").featured-items__items__item__content__cta View item &#8594;
+          
+          .featured-items__items__item
+            img(src="categoriesvans.jpg").featured-items__items__item__image
+
+            .featured-items__items__item__content
+              h2.featured-items__items__item__content__title Burgundy Vans Sneakers
+              p.featured-items__items__item__content__price $119.99
+              a(href="#").featured-items__items__item__content__cta View item &#8594;
+          
+          .featured-items__items__item
+            img(src="categorieswatch.jpg").featured-items__items__item__image
+
+            .featured-items__items__item__content
+              h2.featured-items__items__item__content__title Apple Watch SE
+              p.featured-items__items__item__content__price $299.99
+              a(href="#").featured-items__items__item__content__cta View item &#8594;
+
+        a(href="#").featured-items__more See more items like these &#8594;
+
+      section.smartwatch
+        h1.smartwatch__title Find the perfect smartwatch
+        p.smartwatch__description Maybe it's for you, maybe it's a gift. We're sure you're going to find the right one.
+        button.smartwatch__cta Browse now
+      
+      section.skincare
+        h1.skincare__title Take care of your skin
+        p.skincare__description Curology is here to help you become better. Browse their skin-care products now.
+        button.skincare__cta Take a look
+
+      section.subscribers
+        h1.subscribers__title Become a subscriber
+        p.subscribers__description Want to get the sweet benefits of free shipping, subscriber-only deals and gift card raffles? Say no more, we've got you covered.
+        p.subscribers__pricing Starting at 
+          span $4.99/month 
+          | you can elevate your shopping experience.
+        button.subscribers__cta Subscribe
+
+      section.newsletter
+        .newsletter__text
+          h1.newsletter__text__title Sign up to our newsletter
+          p.newsletter__text__description Get alerts when new products are added, old products go on sale and other promotions.
+          p.newsletter__text__disclaimer *We will not spam you with unwanted emails.
+
+        .newsletter__sign-up
+          input(placeholder="Your email").newsletter__sign-up__email
+          button.newsletter__sign-up__cta Sign up
+
+      footer.footer
+        .footer__links
+          .footer__links__section
+            h1.footer__links__section__title Support & Services
+            a(href="#").footer__links__section__link Shop with an expert
+            a(href="#").footer__links__section__link Price-match guarantee
+            a(href="#").footer__links__section__link 14-day returns
+            a(href="#").footer__links__section__link Track orders
+            a(href="#").footer__links__section__link Accessibility
+            a(href="#").footer__links__section__link Security & Fraud
+            a(href="#").footer__links__section__link Recalls
+
+          .footer__links__section
+            h1.footer__links__section__title About
+            a(href="#").footer__links__section__link Careers
+            a(href="#").footer__links__section__link News
+            a(href="#").footer__links__section__link Blog
+            a(href="#").footer__links__section__link Pressroom
+            a(href="#").footer__links__section__link Affiliate marketing
+            a(href="#").footer__links__section__link Partners
+            a(href="#").footer__links__section__link Suppliers
+            a(href="#").footer__links__section__link Investor relations
+            a(href="#").footer__links__section__link Subscriber plans
+            a(href="#").footer__links__section__link Newsletter
+
+          .footer__links__section
+            h1.footer__links__section__title Payment options
+            a(href="#").footer__links__section__link Leasing
+            a(href="#").footer__links__section__link Gift cards
+            a(href="#").footer__links__section__link Credit cards
+            a(href="#").footer__links__section__link Loans
+          
+          .footer__links__section
+            h1.footer__links__section__title Stores
+            a(href="#").footer__links__section__link Map
+            a(href="#").footer__links__section__link Find an item
+            a(href="#").footer__links__section__link Other services
+
+        .footer__follow
+          h1.footer__follow__title Follow us
+          a(href="#").footer__follow__goto.fab.fa-facebook
+          a(href="#").footer__follow__goto.fab.fa-twitter
+          a(href="#").footer__follow__goto.fab.fa-instagram
+
+    footer.after-footer
+      h1.after-footer__title Shopping made easy

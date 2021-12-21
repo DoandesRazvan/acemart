@@ -1,0 +1,1588 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.after-footer, .footer, .newsletter, .subscribers, .smartwatch, .skincare, .featured-items__items__item__content, .featured-items, .featured-categories, .for-categories__for-kids__content, .for-categories__for-adults__content, .free-shipping, .the-app, .benefits, .deals__rings__content, .deals__sneakers__content, .deals__macbook__content, .deals__rings, .deals__sneakers, .deals__macbook, .landing__main, .landing__subscribe, .landing__tv, .nav {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 64em) {
+  .after-footer, .footer, .newsletter, .subscribers, .smartwatch, .skincare, .featured-items__items__item__content, .featured-items, .featured-categories, .for-categories__for-kids__content, .for-categories__for-adults__content, .free-shipping, .the-app, .benefits, .deals__rings__content, .deals__sneakers__content, .deals__macbook__content, .deals__rings, .deals__sneakers, .deals__macbook, .landing__main, .landing__subscribe, .landing__tv, .nav {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #6E3CBC;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+@media (min-width: 40em) {
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.nav__logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .nav__logo {
+    margin-right: auto;
+  }
+}
+@media (min-width: 64em) {
+  .nav__logo {
+    font-size: 1.875rem;
+  }
+}
+.nav__search {
+  margin-top: 0.625rem;
+  padding: 0.625rem;
+  padding-left: 2.5rem;
+  background: url("search.svg"), #EFEFEF;
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: 0.9375rem center;
+  text-align: center;
+  border: none;
+  border-radius: 3.125rem;
+}
+@media (min-width: 40em) {
+  .nav__search {
+    margin-top: 0;
+    min-width: 15.625rem;
+  }
+}
+@media (min-width: 64em) {
+  .nav__search {
+    min-width: 33.75rem;
+    padding-left: 3.125rem;
+    text-align: left;
+  }
+}
+.nav__search::-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: #7267CB;
+}
+.nav__search:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: #7267CB;
+}
+.nav__search::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  font-style: italic;
+  color: #7267CB;
+}
+.nav__user {
+  display: flex;
+  gap: 1.875rem;
+  margin-top: 1.25rem;
+}
+@media (min-width: 40em) {
+  .nav__user {
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+.nav__user__cart, .nav__user__sign-in {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.nav__user__cart__icon, .nav__user__sign-in__icon {
+  font-size: 1.875rem;
+  color: #98BAE7;
+}
+.nav__user__cart__name, .nav__user__sign-in__name {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  color: #EFEFEF;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .landing {
+    display: grid;
+    height: calc(100vh - 66px);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "tv main main" "subscribe main main";
+  }
+}
+.landing__tv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  grid-area: tv;
+  min-height: 25rem;
+  padding-bottom: 1.25rem;
+  order: 2;
+  background: linear-gradient(0.5turn, rgba(110, 60, 188, 0.1), rgba(110, 60, 188, 0.8)), url("landingtv.jpeg");
+  background-size: cover;
+}
+.landing__tv__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  color: #EFEFEF;
+}
+.landing__tv__title span {
+  font-weight: 400;
+}
+@media (min-width: 40em) {
+  .landing__tv__title {
+    font-size: 2.5rem;
+  }
+}
+.landing__tv__cta {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .landing__tv__cta {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .landing__tv__cta:hover {
+    text-decoration: underline;
+  }
+}
+.landing__subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: subscribe;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  order: 3;
+  background: #7267CB;
+}
+.landing__subscribe__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .landing__subscribe__title {
+    font-size: 2.1875rem;
+  }
+}
+.landing__subscribe__description {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #DFD8CA;
+}
+@media (min-width: 40em) {
+  .landing__subscribe__description {
+    font-size: 1.375rem;
+  }
+}
+.landing__subscribe__price {
+  margin-top: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #DFD8CA;
+}
+.landing__subscribe__price span {
+  font-weight: 700;
+  font-style: italic;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .landing__subscribe__price {
+    font-size: 1.375rem;
+  }
+}
+.landing__subscribe__cta {
+  width: 12.5rem;
+  height: 2.5rem;
+  margin-top: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 64em) {
+  .landing__subscribe__cta {
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .landing__subscribe__cta:hover {
+    background: #6E3CBC;
+    color: #EFEFEF;
+  }
+}
+.landing__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: main;
+  min-height: 31.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  order: 1;
+  background: linear-gradient(0.5turn, rgba(110, 60, 188, 0.5), rgba(110, 60, 188, 0.8)), url("landingphoto.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 40em) {
+  .landing__main {
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 64em) {
+  .landing__main {
+    justify-content: flex-end;
+    padding-bottom: 6.25rem;
+    background: linear-gradient(0.5turn, rgba(110, 60, 188, 0.1), rgba(110, 60, 188, 0.8)), url("landingphoto.jpeg");
+    background-position: center;
+  }
+}
+.landing__main__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.875rem;
+  color: #EFEFEF;
+}
+@media (min-width: 64em) {
+  .landing__main__title {
+    font-size: 2.5rem;
+  }
+}
+.landing__main__description {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #DFD8CA;
+}
+@media (min-width: 64em) {
+  .landing__main__description {
+    font-size: 1.5625rem;
+  }
+}
+.landing__main__cta {
+  width: 11.25rem;
+  height: 2.5rem;
+  margin-top: 1.25rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 64em) {
+  .landing__main__cta {
+    width: 15rem;
+    height: 3.125rem;
+    font-size: 1.875rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .landing__main__cta:hover {
+    background: #6E3CBC;
+    color: #EFEFEF;
+  }
+}
+
+.deals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.75rem;
+}
+@media (min-width: 64em) {
+  .deals {
+    margin: 3.75rem 2.5rem 0;
+  }
+}
+.deals__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .deals__title {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 64em) {
+  .deals__title {
+    font-size: 2.5rem;
+  }
+}
+.deals__rings, .deals__sneakers, .deals__macbook {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 31.25rem;
+  padding-bottom: 1.25rem;
+}
+@media (min-width: 64em) {
+  .deals__rings, .deals__sneakers, .deals__macbook {
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+}
+.deals__rings__content, .deals__sneakers__content, .deals__macbook__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 12.5rem;
+  background: #6E3CBC;
+}
+@media (min-width: 64em) {
+  .deals__rings__content, .deals__sneakers__content, .deals__macbook__content {
+    align-items: flex-start;
+    width: 37.5rem;
+    height: 18.75rem;
+  }
+}
+.deals__rings__content__title, .deals__sneakers__content__title, .deals__macbook__content__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .deals__rings__content__title, .deals__sneakers__content__title, .deals__macbook__content__title {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .deals__rings__content__title, .deals__sneakers__content__title, .deals__macbook__content__title {
+    font-size: 2.1875rem;
+    text-align: left;
+  }
+}
+.deals__rings__content__description, .deals__sneakers__content__description, .deals__macbook__content__description {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  color: #DFD8CA;
+}
+@media (min-width: 40em) {
+  .deals__rings__content__description, .deals__sneakers__content__description, .deals__macbook__content__description {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .deals__rings__content__description, .deals__sneakers__content__description, .deals__macbook__content__description {
+    font-size: 1.5625rem;
+    text-align: left;
+  }
+}
+.deals__rings__content__cta, .deals__sneakers__content__cta, .deals__macbook__content__cta {
+  width: 6.25rem;
+  height: 1.875rem;
+  margin-top: 0.625rem;
+  background: #EFEFEF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 40em) {
+  .deals__rings__content__cta, .deals__sneakers__content__cta, .deals__macbook__content__cta {
+    width: 8.75rem;
+    height: 2.5rem;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .deals__rings__content__cta, .deals__sneakers__content__cta, .deals__macbook__content__cta {
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .deals__rings__content__cta:hover, .deals__sneakers__content__cta:hover, .deals__macbook__content__cta:hover {
+    background: #7267CB;
+    color: #EFEFEF;
+  }
+}
+.deals__rings {
+  margin-top: 2.5rem;
+  background: url("dealsring.jpeg");
+  background-size: cover;
+  background-position: bottom;
+}
+@media (min-width: 52.5em) {
+  .deals__rings {
+    background-position: center;
+  }
+}
+.deals__sneakers {
+  background: url("dealsnike.jpeg");
+  background-size: cover;
+  background-position: center top;
+}
+@media (min-width: 64em) {
+  .deals__sneakers {
+    justify-content: flex-end;
+  }
+  .deals__sneakers__content {
+    align-items: flex-end !important;
+  }
+  .deals__sneakers__content__title {
+    text-align: right !important;
+  }
+  .deals__sneakers__content__description {
+    text-align: right !important;
+  }
+}
+.deals__macbook {
+  background: url("dealsmacbook.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.deals__more {
+  margin-top: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .deals__more {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .deals__more:hover {
+    text-decoration: underline;
+  }
+}
+
+.benefits {
+  margin-top: 3.75rem;
+}
+.benefits__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  text-align: center;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .benefits__title {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 64em) {
+  .benefits__title {
+    font-size: 2.5rem;
+  }
+}
+.benefits__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 64em) {
+  .benefits__content {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3.75rem;
+  }
+}
+@media (min-width: 87.5em) {
+  .benefits__content {
+    gap: 7.5rem;
+  }
+}
+.benefits__content__benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.benefits__content__benefit__icon {
+  font-size: 2.5rem;
+  color: #98BAE7;
+}
+@media (min-width: 87.5em) {
+  .benefits__content__benefit__icon {
+    font-size: 3.125rem;
+  }
+}
+.benefits__content__benefit__tagline {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #7267CB;
+}
+@media (min-width: 87.5em) {
+  .benefits__content__benefit__tagline {
+    font-size: 1.5625rem;
+  }
+}
+
+.the-app {
+  margin-top: 3.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background: #6E3CBC;
+}
+@media (min-width: 64em) {
+  .the-app {
+    margin: 3.75rem 2.5rem 0;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+.the-app__store-icons {
+  display: none;
+}
+@media (min-width: 64em) {
+  .the-app__store-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .the-app__store-icons__appstore, .the-app__store-icons__playstore {
+    font-size: 10rem;
+    color: #EFEFEF;
+  }
+  .the-app__store-icons__and {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+    color: #EFEFEF;
+  }
+}
+.the-app__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  text-align: center;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .the-app__title {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 64em) {
+  .the-app__title {
+    margin-top: 1.25rem;
+    font-size: 2.5rem;
+  }
+}
+.the-app__description {
+  margin-top: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #DFD8CA;
+}
+@media (min-width: 40em) {
+  .the-app__description {
+    font-size: 1.5625rem;
+  }
+}
+.the-app__ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 2.5rem;
+}
+@media (min-width: 40em) {
+  .the-app__ctas {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}
+.the-app__ctas__cta {
+  width: 7.5rem;
+  height: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 40em) {
+  .the-app__ctas__cta {
+    width: 11.25rem;
+    height: 3.75rem;
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .the-app__ctas__cta {
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .the-app__ctas__cta:hover {
+    background: #7267CB;
+    color: #EFEFEF;
+  }
+}
+
+.free-shipping {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  background: #7267CB;
+}
+@media (min-width: 64em) {
+  .free-shipping {
+    margin: 2.5rem 2.5rem 0;
+  }
+}
+.free-shipping__description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #EFEFEF;
+}
+@media (min-width: 64em) {
+  .free-shipping__description {
+    font-size: 1.375rem;
+  }
+}
+.free-shipping__description span, .free-shipping__description a {
+  font-weight: 400;
+}
+.free-shipping__description a {
+  color: #EFEFEF;
+}
+
+.for-categories {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 64em) {
+  .for-categories {
+    gap: 2.5rem;
+    margin: 2.5rem 2.5rem 0;
+  }
+}
+@media (min-width: 87.5em) {
+  .for-categories {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.for-categories__for-kids, .for-categories__for-adults {
+  height: 18.75rem;
+  position: relative;
+  flex-grow: 1;
+}
+@media (min-width: 29.6875em) {
+  .for-categories__for-kids, .for-categories__for-adults {
+    height: 25rem;
+  }
+}
+@media (min-width: 40em) {
+  .for-categories__for-kids, .for-categories__for-adults {
+    height: 31.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .for-categories__for-kids, .for-categories__for-adults {
+    height: 37.5rem;
+  }
+}
+@media (min-width: 87.5em) {
+  .for-categories__for-kids, .for-categories__for-adults {
+    width: 43.75rem;
+  }
+}
+.for-categories__for-kids__content, .for-categories__for-adults__content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 0.625rem;
+  z-index: 1;
+}
+@media (min-width: 29.6875em) {
+  .for-categories__for-kids__content, .for-categories__for-adults__content {
+    padding-bottom: 1.25rem;
+  }
+}
+@media (min-width: 40em) {
+  .for-categories__for-kids__content, .for-categories__for-adults__content {
+    padding-bottom: 2.5rem;
+  }
+}
+.for-categories__for-kids__content__title, .for-categories__for-adults__content__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5625rem;
+  color: #EFEFEF;
+}
+@media (min-width: 29.6875em) {
+  .for-categories__for-kids__content__title, .for-categories__for-adults__content__title {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 40em) {
+  .for-categories__for-kids__content__title, .for-categories__for-adults__content__title {
+    font-size: 2.5rem;
+  }
+}
+.for-categories__for-kids__content__description, .for-categories__for-adults__content__description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #DFD8CA;
+}
+@media (min-width: 29.6875em) {
+  .for-categories__for-kids__content__description, .for-categories__for-adults__content__description {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 40em) {
+  .for-categories__for-kids__content__description, .for-categories__for-adults__content__description {
+    font-size: 1.5625rem;
+  }
+}
+.for-categories__for-kids__content__cta, .for-categories__for-adults__content__cta {
+  width: 7.5rem;
+  height: 1.875rem;
+  margin-top: 0.625rem;
+  background: #EFEFEF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 29.6875em) {
+  .for-categories__for-kids__content__cta, .for-categories__for-adults__content__cta {
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 40em) {
+  .for-categories__for-kids__content__cta, .for-categories__for-adults__content__cta {
+    width: 11.25rem;
+    height: 3.125rem;
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .for-categories__for-kids__content__cta, .for-categories__for-adults__content__cta {
+    margin-top: 1.25rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .for-categories__for-kids__content__cta:hover, .for-categories__for-adults__content__cta:hover {
+    background: #7267CB;
+    color: #EFEFEF;
+  }
+}
+.for-categories__for-kids {
+  background: linear-gradient(0.5turn, rgba(110, 60, 188, 0.3), rgba(110, 60, 188, 0.8)), url("forkids.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+@media (min-width: 40em) {
+  .for-categories__for-kids {
+    background: linear-gradient(0.5turn, rgba(110, 60, 188, 0.3), rgba(110, 60, 188, 0.8)), url("forkids.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+}
+.for-categories__for-kids__content {
+  align-items: flex-end;
+}
+.for-categories__for-kids__content::after {
+  content: "";
+  position: absolute;
+  background: #6E3CBC;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+          clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.for-categories__for-kids__content__description {
+  padding-left: 30%;
+  text-align: right;
+}
+.for-categories__for-adults {
+  background: linear-gradient(0.5turn, rgba(110, 60, 188, 0.3), rgba(110, 60, 188, 0.8)), url("foradults.jpeg");
+  background-size: cover;
+}
+.for-categories__for-adults__content {
+  align-items: flex-start;
+}
+.for-categories__for-adults__content::after {
+  content: "";
+  position: absolute;
+  background: #6E3CBC;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+.for-categories__for-adults__content__description {
+  padding-right: 30%;
+}
+
+.featured-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.75rem;
+}
+.featured-categories__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  text-align: center;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .featured-categories__title {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 64em) {
+  .featured-categories__title {
+    font-size: 2.5rem;
+  }
+}
+.featured-categories__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+@media (min-width: 64em) {
+  .featured-categories__items {
+    flex-direction: row;
+    gap: 6.25rem;
+    margin-top: 3.75rem;
+  }
+}
+@media (min-width: 87.5em) {
+  .featured-categories__items {
+    gap: 12.5rem;
+  }
+}
+.featured-categories__items__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+}
+.featured-categories__items__item:nth-of-type(1) {
+  margin-top: 2.5rem;
+}
+@media (min-width: 64em) {
+  .featured-categories__items__item:nth-of-type(1) {
+    margin-top: 0;
+  }
+}
+.featured-categories__items__item__image {
+  width: 6.25rem;
+  height: 6.25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: solid 5px #7267CB;
+  border-radius: 50%;
+}
+@media (min-width: 40em) {
+  .featured-categories__items__item__image {
+    width: 9.375rem;
+    height: 9.375rem;
+  }
+}
+.featured-categories__items__item__link {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .featured-categories__items__item__link {
+    font-size: 1.25rem;
+  }
+}
+.featured-categories__all {
+  margin-top: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .featured-categories__all {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .featured-categories__all:hover {
+    text-decoration: underline;
+  }
+}
+
+.featured-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.75rem;
+}
+.featured-items__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  text-align: center;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .featured-items__title {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 64em) {
+  .featured-items__title {
+    font-size: 2.5rem;
+  }
+}
+.featured-items__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+@media (min-width: 87.5em) {
+  .featured-items__items {
+    flex-direction: row;
+    margin-top: 2.5rem;
+  }
+}
+.featured-items__items__item {
+  min-width: 16.25rem;
+  background: #7267CB;
+  border-radius: 0.625rem;
+  box-shadow: 0.375rem 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 26.875em) {
+  .featured-items__items__item {
+    min-width: 18.75rem;
+  }
+}
+@media (min-width: 40em) {
+  .featured-items__items__item {
+    min-width: 25rem;
+  }
+}
+.featured-items__items__item:nth-of-type(1) {
+  margin-top: 2.5rem;
+}
+@media (min-width: 87.5em) {
+  .featured-items__items__item:nth-of-type(1) {
+    margin-top: 0;
+  }
+}
+.featured-items__items__item__image {
+  width: 100%;
+  height: 12.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+.featured-items__items__item__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.featured-items__items__item__content__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .featured-items__items__item__content__title {
+    font-size: 1.25rem;
+  }
+}
+.featured-items__items__item__content__price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5625rem;
+  color: #98BAE7;
+}
+@media (min-width: 40em) {
+  .featured-items__items__item__content__price {
+    font-size: 1.875rem;
+  }
+}
+.featured-items__items__item__content__cta {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .featured-items__items__item__content__cta {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .featured-items__items__item__content__cta:hover {
+    text-decoration: underline;
+  }
+}
+.featured-items__more {
+  margin-top: 2.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .featured-items__more {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .featured-items__more:hover {
+    text-decoration: underline;
+  }
+}
+
+.smartwatch, .skincare {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 25rem;
+}
+@media (min-width: 64em) {
+  .smartwatch, .skincare {
+    min-height: 31.25rem;
+    margin: 0 2.5rem 0;
+  }
+}
+.smartwatch__title, .skincare__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5625rem;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .smartwatch__title, .skincare__title {
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .smartwatch__title, .skincare__title {
+    font-size: 2.1875rem;
+  }
+}
+.smartwatch__description, .skincare__description {
+  margin-top: 0.3125rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  color: #DFD8CA;
+}
+@media (min-width: 40em) {
+  .smartwatch__description, .skincare__description {
+    max-width: 25rem;
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .smartwatch__description, .skincare__description {
+    max-width: 37.5rem;
+    font-size: 1.875rem;
+  }
+}
+.smartwatch__cta, .skincare__cta {
+  width: 10rem;
+  height: 2.5rem;
+  margin-top: 0.9375rem;
+  background: #EFEFEF;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 40em) {
+  .smartwatch__cta, .skincare__cta {
+    width: 12.5rem;
+    height: 3.125rem;
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .smartwatch__cta, .skincare__cta {
+    width: 15rem;
+    height: 3.75rem;
+    margin-top: 1.5625rem;
+    font-size: 1.875rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .smartwatch__cta:hover, .skincare__cta:hover {
+    background: #7267CB;
+    color: #EFEFEF;
+  }
+}
+
+.smartwatch {
+  margin-top: 3.75rem;
+  background: linear-gradient(0.75turn, rgba(110, 60, 188, 0.7), rgba(110, 60, 188, 0.8)), url("promowatch.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.skincare {
+  align-items: flex-end;
+  background: linear-gradient(0.25turn, rgba(110, 60, 188, 0.7), rgba(110, 60, 188, 0.8)), url("promoskincare.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 80%;
+}
+@media (min-width: 64em) {
+  .skincare {
+    margin-top: 2.5rem;
+  }
+}
+.skincare__title {
+  text-align: right;
+}
+.skincare__description {
+  text-align: right;
+}
+
+.subscribers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.75rem;
+}
+.subscribers__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.875rem;
+  text-align: center;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .subscribers__title {
+    font-size: 2.1875rem;
+  }
+}
+@media (min-width: 40em) {
+  .subscribers__title {
+    font-size: 2.5rem;
+  }
+}
+.subscribers__description {
+  margin-top: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .subscribers__description {
+    margin-top: 1.875rem;
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 64em) {
+  .subscribers__description {
+    width: 56.25rem;
+  }
+}
+.subscribers__pricing {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #98BAE7;
+}
+@media (min-width: 40em) {
+  .subscribers__pricing {
+    margin-top: 1.25rem;
+    font-size: 1.5625rem;
+  }
+}
+.subscribers__pricing span {
+  font-weight: 700;
+}
+.subscribers__cta {
+  width: 11.25rem;
+  height: 3.125rem;
+  margin-top: 1.25rem;
+  background: #6E3CBC;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #EFEFEF;
+  border: none;
+  border-radius: 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 40em) {
+  .subscribers__cta {
+    width: 16.25rem;
+    height: 4.375rem;
+    margin-top: 1.875rem;
+    font-size: 1.875rem;
+  }
+}
+@media (min-width: 64em) {
+  .subscribers__cta {
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .subscribers__cta:hover {
+    background: #7267CB;
+  }
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.75rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background: #7267CB;
+}
+@media (min-width: 64em) {
+  .newsletter {
+    margin: 3.75rem 2.5rem 0;
+  }
+}
+.newsletter__text__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .newsletter__text__title {
+    font-size: 1.5625rem;
+  }
+}
+.newsletter__text__description {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  text-align: center;
+  color: #EFEFEF;
+}
+@media (min-width: 40em) {
+  .newsletter__text__description {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+  }
+}
+.newsletter__text__disclaimer {
+  margin-top: 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.75rem;
+  text-align: center;
+  color: #DFD8CA;
+}
+@media (min-width: 40em) {
+  .newsletter__text__disclaimer {
+    margin-top: 1.25rem;
+    font-size: 0.9375rem;
+  }
+}
+.newsletter__sign-up {
+  position: relative;
+  margin-top: 1.25rem;
+  width: 16.4375rem;
+}
+@media (min-width: 40em) {
+  .newsletter__sign-up {
+    width: 25.1875rem;
+    margin-top: 2.5rem;
+  }
+}
+.newsletter__sign-up__email {
+  width: 10.1875rem;
+  height: 2.5rem;
+  padding: 0 0.625rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+  border: none;
+  border-radius: 0.3125rem 0 0 0.3125rem;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 40em) {
+  .newsletter__sign-up__email {
+    width: 16.4375rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+  }
+}
+.newsletter__sign-up__email::-moz-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+}
+.newsletter__sign-up__email:-ms-input-placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+}
+.newsletter__sign-up__email::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .newsletter__sign-up__email::-moz-placeholder {
+    font-size: 1.25rem;
+  }
+  .newsletter__sign-up__email:-ms-input-placeholder {
+    font-size: 1.25rem;
+  }
+  .newsletter__sign-up__email::placeholder {
+    font-size: 1.25rem;
+  }
+}
+.newsletter__sign-up__cta {
+  position: absolute;
+  right: 0;
+  width: 6.25rem;
+  height: 2.5rem;
+  background: #6E3CBC;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: #EFEFEF;
+  border: none;
+  border-radius: 0 0.3125rem 0.3125rem 0;
+  box-shadow: 0.375rem 0.375rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 40em) {
+  .newsletter__sign-up__cta {
+    width: 8.75rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .newsletter__sign-up__cta {
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .newsletter__sign-up__cta:hover {
+    background: #98BAE7;
+    color: #6E3CBC;
+  }
+}
+
+.footer {
+  margin-top: 3.75rem;
+}
+@media (min-width: 64em) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin: 3.75rem 2.5rem 0;
+    padding: 2.5rem 0;
+    border-top: solid 1px #98BAE7;
+    border-bottom: solid 1px #98BAE7;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-top: solid 0.0625rem #98BAE7;
+  border-bottom: solid 0.0625rem #98BAE7;
+}
+@media (min-width: 64em) {
+  .footer__links {
+    flex-direction: row;
+    gap: 1.875rem;
+    padding: 0 2.5rem 0 0;
+    border: none;
+    border-right: solid 0.0625rem #98BAE7;
+  }
+}
+@media (min-width: 87.5em) {
+  .footer__links {
+    gap: 3.125rem;
+  }
+}
+.footer__links__section {
+  display: flex;
+  flex-direction: column;
+}
+.footer__links__section:not(:nth-of-type(1)) {
+  margin-top: 1.25rem;
+}
+@media (min-width: 64em) {
+  .footer__links__section:not(:nth-of-type(1)) {
+    margin-top: 0;
+  }
+}
+.footer__links__section__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .footer__links__section__title {
+    font-size: 1.25rem;
+  }
+}
+.footer__links__section__link {
+  margin-top: 0.3125rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .footer__links__section__link {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__links__section__link:hover {
+    color: black;
+  }
+}
+.footer__links__section__link:nth-of-type(1) {
+  margin-top: 0.625rem;
+}
+.footer__follow {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: solid 1px #98BAE7;
+}
+@media (min-width: 64em) {
+  .footer__follow {
+    display: block;
+    margin-left: 2.5rem;
+    padding: 0;
+    border-bottom: none;
+  }
+}
+.footer__follow__title {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  color: #6E3CBC;
+}
+@media (min-width: 40em) {
+  .footer__follow__title {
+    font-size: 1.25rem;
+  }
+}
+.footer__follow__goto {
+  margin-top: 0.3125rem;
+  font-size: 1.875rem;
+  text-decoration: none;
+  color: #7267CB;
+}
+@media (min-width: 40em) {
+  .footer__follow__goto {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .footer__follow__goto {
+    margin-left: 0.625rem;
+    margin-top: 0.625rem;
+  }
+  .footer__follow__goto:hover {
+    color: #6E3CBC;
+  }
+}
+.footer__follow__goto:nth-of-type(1) {
+  margin-top: 0.625rem;
+}
+@media (min-width: 64em) {
+  .footer__follow__goto:nth-of-type(1) {
+    margin-left: 0;
+  }
+}
+
+.after-footer__title {
+  margin-top: 0.625rem;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #ede6f7;
+}
+@media (min-width: 40em) {
+  .after-footer__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .after-footer__title {
+    font-size: 3.125rem;
+    text-align: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+}
